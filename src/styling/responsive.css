@@ -1,0 +1,59 @@
+@media screen and (max-width: 769px) {
+  .container {
+    width: 100%;
+  }
+  header {
+    height: 100%;
+  }
+  .hero {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .nav-link {
+    display: none;
+  }
+  .nav-bar {
+    padding: 2rem 1rem;
+  }
+  .nav {
+    background: #150e28;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    padding: 2rem;
+    z-index: 2;
+    transition: ease .3s;
+  }
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 0 1rem 0;
+  }
+
+  .nav ul li a {
+    padding: 1rem 0;
+    line-height: 1.5;
+    display: block;
+  }
+
+  .toggle-btn {
+    display: block;
+    cursor: pointer;
+  }
+  .toggle-btn-mob {
+    border: 1px solid #fe34b9;
+    text-align: right;
+    font-size: 2rem;
+    right: 5%;
+    position: absolute;
+    top: 5%;
+    padding: 0.3rem;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 50%;
+  }
+}
