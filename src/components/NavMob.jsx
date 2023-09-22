@@ -7,10 +7,7 @@ const NavMob = ({open,setOpen}) => {
     < div className='nav'>
   
   <X onClick={()=>setOpen(!open)}  className='toggle-btn-mob'/>
-      {/* <div className='mob-nav'> */}
-   
-{/*   
-      <X onClick={()=>setOpen(!open)}  className='toggle-btn-mob'/> */}
+     
 
 <ul>
  <li><a href="#">Timeline</a></li>
@@ -19,9 +16,9 @@ const NavMob = ({open,setOpen}) => {
  <li><a href="#">Contact</a></li>
 </ul>
 
-<button className='nav-btn mob'>Register</button>
+<button className='nav-btn '>Register</button>
 </div>
-// </div>
+
 
   )
 }

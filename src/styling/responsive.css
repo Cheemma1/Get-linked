@@ -8,15 +8,20 @@
   .hero {
     grid-template-columns: repeat(1, 1fr);
   }
-  .nav-link {
+  .nav-link , .hero-text-right{
     display: none;
+  }
+  .hero-mob{
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
   }
   .nav-bar {
     padding: 2rem 1rem;
   }
   .nav {
     background: #150e28;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;

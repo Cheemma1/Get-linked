@@ -3,11 +3,7 @@ import ham from '../assets/Vector.png'
 import NavMob from './NavMob'
 
 const Nav = () => {
-
-  const [open, setOpen] = useState(false)
-  // const navToggle=()=>{
-  //   setOpen(!open)
-  // }
+const [open, setOpen] = useState(false)
   return (
     <>
     <nav className=' container nav-bar'>

@@ -104,6 +104,9 @@ background-position:  top 20vh left 8vw ,top -30vh left -8vw, left 38vw top 40vh
   width: 90%;
 
 }
+.hero-mob{
+  display: none;
+}
 
 .text-one{
   position: relative;
@@ -343,7 +346,7 @@ flex-direction: column;
   padding-bottom: 4rem;
 }
 
-.timeline{
+/* .timeline{
   display: flex;
   align-items: center;
    justify-content: space-between; 
@@ -375,4 +378,185 @@ position: absolute;
   left: 19px;
 
 }
+ */
+ 
 
+ 
+
+
+
+
+ /* .timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px;
+} */
+
+.li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+ 
+}
+
+.circle {
+  position: relative;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+
+  font-weight: bold;
+ 
+}
+
+.circle h2{
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+margin: 0;
+}
+.vert{
+  width: 2px;
+  height: 40px;
+  margin: 10px auto 10px auto;
+  background: #2ecc71;
+}
+.text { 
+   flex: 1;
+  z-index: 1;
+  display: flex; /* Add display: flex */
+  flex-direction: column; /* Stack text elements vertically */
+  align-items: center; /* Center text horizontally */
+  text-align: center; /* Center text within each element */
+}
+
+
+/* Additional styling (optional) */
+.li h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.li p {
+  font-size: 1rem;
+}
+
+
+
+
+
+
+/* .info-timeline ul li span.timeline-circle {
+  position: relative;
+  border: 2px solid #999;
+  border-radius: 100%;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #fff;
+  z-index: 2;
+  display: inline-block;
+}
+
+.info-timeline ul li:not(:first-of-type) span.timeline-circle::before {
+  position: absolute;
+  border: 1px solid #999;
+  width: 0;
+  height: 50px;
+  display: block;
+  content: '';
+  left: 50%;
+  z-index: 1;
+  top: -54px;
+  margin-left: -1px;
+}
+
+.info-timeline ul li a {
+  color: #000;
+}
+.li{
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* rewards styling */
+.reward{
+  background:  url('./assets/Purple-Lens-Flare-PNR.png'),url('./assets/Purple-Lens-Flare-2.png'),
+  url('./assets/sata gra.png'),url('./assets/whitestar.png'), url('./assets/whitestar.png'),  url('./assets/whitestar.png'), url('./assets//star.png'), url('./assets//smallstar.png')#140d27; 
+  background-repeat: no-repeat;
+   background-blend-mode: hard-light;
+ background-position:  bottom -20vh left -8vw ,top 20vh right -4vw,  top 10vh left 25vw , top 40vh right 6vw,top 40vh left 50vw,bottom 25vh left 36vw, bottom 15vh right 18vw, bottom 15vh left 18vw;
+}
+.reward-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0 8rem 0;
+}
+.reward-txt {
+ padding-left: 40rem;
+ padding-top: 3rem;
+ width: 76%;
+}
+.cup{
+  width: 50%;
+}
+.medals{
+  width: 85%;
+}
+/* sponsors styling */
+.sponsor-txt{
+  text-align: center;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sponsor-txt p{
+  width: 45%;
+}
+.sponsor-container{
+  text-align: center;
+  padding: 3rem 0;
+}
+.mirrow-container{
+  border-radius: 5px;
+border: 1px solid #D434FE;
+background: rgba(255, 255, 255, 0.01);
+padding: 6rem;
+
+
+
+}
+.set-image{
+   display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  /* padding: 3rem 0; */
+}
+.set-image2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.horizontal{
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  /* justify-content: space-between; */
+  gap: 7rem;
+}
+.line-3{
+ height: 4px; ; 
+ width: 35%;
+ background: var(--clr-pink);
+ margin: 2rem 0;
+}
