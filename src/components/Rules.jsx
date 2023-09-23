@@ -4,6 +4,7 @@ import image from '../assets/rules-img.png'
 const Rules = () => {
   return (
     <div className='holder'>
+    <div className='holder-rules'>
     <div className='container rules-container'>
 <div>
     <h2 className='heading '> Rules and
@@ -17,10 +18,11 @@ that's what we're all about!</p>
 </div>
 
 <div >
-<img src={image} alt="image" />
+<img src={image} alt="image" className='rules-img' />
 </div>
 </div>
 <div className='line'></div>
+    </div>
     </div>
   )
 }

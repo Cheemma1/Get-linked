@@ -1,6 +1,7 @@
 @media screen and (max-width: 769px) {
   .container {
     width: 100%;
+    padding: 1rem;
   }
   header {
     height: 100%;
@@ -61,4 +62,90 @@
     color: #fff;
     border-radius: 50%;
   }
+  /* intro section */
+  .intro-section{
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .intro-img, .rules-img{
+    width: 95%;
+  }
+  .arrow{
+    position: absolute;
+    top: 41%;
+    left: 40%;
+    width: 15%;
+  }
+  .star{
+    position: absolute;
+    top: 52%;
+    right: 1%;
+    width: 5%;
+  }
+  .star1{
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    width: 5%;
+  }
+  .heading{
+    font-size: 1.6rem;
+  }
+  .paragraph, .heading{
+    width: 100%;
+    text-align: center;
+  }
+  .rules-container{
+    flex-direction: column-reverse;
+    padding: 1rem;
+    
+  }
+  .rules-container, .key-container, .question-container h2{
+    width: 100%;
+  }
+/* .holder{
+  display: none;
+} */
+  .holder{
+    display: block;
+    background: url("./assets/Purple-Lens-Flare-PNG.png"), url('./assets/Purple-Lens-Flare-2.png'),
+    url('./assets/sata gra.png'),url('./assets/whitestar.png'),  #140d27; 
+    background-repeat: no-repeat;
+     background-blend-mode: hard-light;
+   background-position:  top -20vh left -2vw ,top 20vh right -4vw,  top 30vh left 25vw , bottom 20vh right 60vw;
+  }
+  .key-container{
+flex-direction: column;
+gap: 1rem;
+padding: 5rem 1rem;
 }
+.question-container{
+grid-template-columns: repeat(1,1fr);
+}
+.question-container p{
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.reward-container{
+flex-direction: column;
+gap: 3rem;
+}
+
+.reward-txt {
+ padding-left: 0;
+ padding-top: 3rem;
+ width: 100%;
+}
+.cup, .medals{
+  width: 100%;
+}
+.sponsor-txt p{
+  width: 100%;
+}
+.mirrow-container{
+padding: 1rem;
+}
+.mirrow-container img{
+width: 30%;
+}}

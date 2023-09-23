@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Unica+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --border-box-button:4px;
+  --font-family-para: 'Montserrat', sans-serif;
+ --font-family-heading: 'Clash Display', sans-serif;
+ --font-family-timer: 'Unica One', 'cursive';
+--font-weight-para:400;
+  --clr-body-bg:#140d27;
+ --clr-white:#FFF;
+ --clr-Light-purple:#d434fe;
+ --clr-pink:#FF26B9;
+  --clr-Line-bg:rgba(255, 255, 255, 0.18);
+  --clr-gradeint: linear-gradient(270deg, #903aff 0%, #fe34b9 100%)
+}
+body{
+  background-color: var(--clr-body-bg);
+}
+/* utility */
+.container{
+  width: 90%;
+  margin: auto;
+}

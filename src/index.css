@@ -526,37 +526,201 @@ margin: 0;
 .sponsor-container{
   text-align: center;
   padding: 3rem 0;
+
+}
+.sponsor{
+  background:  url('./assets/Purple-Lens-Flare-PNR.png'),url('./assets/Purple-Lens-Flare-2.png'),
+  url('./assets/sata gra.png') ,url('./assets/sata gra.png'),  url('./assets/whitestar.png'), #140d27; 
+  background-repeat: no-repeat;
+   background-blend-mode: hard-light;
+ background-position:  top -20vh left -25vw ,top 20vh right -4vw,  top 20vh left 25vw ,top 44vh left 56vw,bottom 14vh left 56vw;
 }
 .mirrow-container{
   border-radius: 5px;
 border: 1px solid #D434FE;
 background: rgba(255, 255, 255, 0.01);
 padding: 6rem;
-
-
-
 }
 .set-image{
    display: flex;
   align-items: center;
-  justify-content: space-between; 
-  /* padding: 3rem 0; */
+  justify-content: center;
+  gap: 5rem;
+
+
 }
 .set-image2{
   display: flex;
+  justify-content: center;
+  gap: 5rem;
   align-items: center;
-  justify-content: space-between;
+  
 }
+.company-logo{
+ 
+  height: 70px;
+  width: 22%;
+  object-fit: contain;
+}
+
+/* .line-img{margin-left: 2rem;} */
+/* .line-img2{margin-right: 2rem;} */
 .horizontal{
   display: flex;
   align-items: center;
-  padding: 3rem 0;
-  /* justify-content: space-between; */
-  gap: 7rem;
+  justify-content: center;
+  padding: 1rem 0;
+ 
+  gap: 2rem;
 }
 .line-3{
  height: 4px; ; 
- width: 35%;
- background: var(--clr-pink);
+ width: 30%;
+ background: var(--clr-Light-purple);
  margin: 2rem 0;
+}
+.line-4{
+ height: 4px; ; 
+ width: 35%;
+ background: var(--clr-Light-purple);
+ margin: 2rem 0;
+}
+/* privacy styling */
+
+.holder-last{
+  background:  url('./assets/Purple-Lens-Flare-PNR.png'),
+  url('./assets/star.png'),url('./assets/smallstar.png'), url('./assets/star-pu.png'),  url('./assets/smallstar.png'),  url('./assets//star.png'), url('./assets/sata gra.png'), url('./assets/p')#140d27; 
+  background-repeat: no-repeat;
+   background-blend-mode: hard-light;
+ background-position:  bottom -50vh left -20vw ,top 20vh left 28vw , top 40vh right 20vw,top 40vh left 50vw,bottom 29vh left 56vw, bottom 25vh right 9vw, bottom 35vh left 2vw;
+}
+.privacy-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 0;
+  gap: 5rem;
+}
+.privacy-txt{
+  width: 90%;
+}
+.privacy-txt h2{
+  width: 60%;
+}
+
+.privacy-txt p{
+  color: var(--clr-white);
+  font-family: var(--font-family-para);
+}
+.para3{
+  padding: 1rem 0;
+}
+.privacy-mirrow{
+  border-radius: 5px;
+border: 1px solid #D434FE;
+background: rgba(217, 217, 217, 0.03);
+padding: 2rem ;
+font-family: var(--font-family-para);
+margin-top: 2rem;
+color: var(--clr-white);
+}
+.privacy-mirrow h3{
+  color: var(--clr-Light-purple);
+padding: 1rem 0;
+
+}
+.privacy-mirrow ul li{
+  padding: 1rem 0;
+}
+.img-container{
+  width: 100%;
+}
+.img-container img{
+  width: 80%;
+}
+.privacy-btn{
+  margin: auto;
+  text-align: center;
+  display: grid;
+  align-items: center;
+}
+
+footer{
+  background: #100B20;
+  position: relative;
+}
+.footer-flex{
+ display: grid;
+
+ grid-template-columns: repeat(2,1fr);
+ padding-top: 3rem;
+}
+
+.link{
+  display: flex;
+  justify-content: space-between;
+}
+.footer-para{
+  font-size: 0.9rem;
+}
+.footer-flex h1{
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.footer-link h5{
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  color: var(--clr-Light-purple);
+  padding-bottom: 1rem;
+}
+.footer-link ul{
+  color: var(--clr-white);
+  font-family: var(--font-family-para);
+  list-style: none;
+}
+.footer-link li{
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
+}
+.footer-link li span{
+  margin-right: 0.4rem;
+}
+.footer-last{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 1rem 0;
+  font-family: var(--font-family-para);
+  color: var(--clr-white);
+  font-size: 0.9rem;
+}
+.img-span img{
+  width: 4%;
+  height: 15px;
+}
+.last-txt{
+  text-align: center;
+  font-family: var(--font-family-para);
+  color: var(--clr-white);
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
+.footer-star{
+  position: absolute;
+  left: 2%;
+  top: 30%;
+}
+.footer-star1{
+  position: absolute;
+  right: 30%;
+  top: 30%;
+}
+.footer-star2{
+  position: absolute;
+  left: 40%;
+  bottom: 20%;
+}
+.footer-star3{
+  position: absolute;
+  right: 5%;
+  bottom: 25%;
 }
