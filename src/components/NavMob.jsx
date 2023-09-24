@@ -1,5 +1,6 @@
 import { X } from 'phosphor-react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 const NavMob = ({open,setOpen}) => {
@@ -13,10 +14,10 @@ const NavMob = ({open,setOpen}) => {
  <li><a href="#">Timeline</a></li>
  <li><a href="#">Overview</a></li>
  <li><a href="#">Faqs</a></li>
- <li><a href="#">Contact</a></li>
+ <Link to={"/contact"}> <li>Contact</li></Link>
 </ul>
 
-<button className='nav-btn '>Register</button>
+<button className='nav-btn '> <Link to={"/reg"}>Register</Link></button>
 </div>
 
 

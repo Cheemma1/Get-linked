@@ -65,15 +65,26 @@ body{
 .logo {
   color:var(--clr-white);
   font-family: var(--font-family-heading);
+  list-style: none;
 }
 .line {
   width: 100%;
   height: 1px;
   background-color:var(--clr-Line-bg);
 }
+.nav-bar a{
+text-decoration: none;
+}
+.nav-bar li a:hover{
+  background: linear-gradient(90deg, #903AFF 3.08%, #FF26B9 93.85%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
 .nav-btn {
   background: var(--clr-gradeint);
   border: 0;
+  text-decoration: none;
   width: 150px;
   height: 45px;
   border-radius: var(--border-box-button);
@@ -81,6 +92,14 @@ body{
   cursor: pointer;
   font-family: var(--font-family-para);
   font-weight: var(--font-weight-para);
+}
+.nav-btn a{
+  color: var(--clr-white);
+}
+
+.nav-btn:hover{
+  background:transparent;
+border: 2px solid var(--clr-Light-purple) ;
 }
 header {
   height: 100vh;
