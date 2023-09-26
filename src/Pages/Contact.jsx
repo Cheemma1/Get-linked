@@ -38,13 +38,15 @@ const Contact = () => {
         <h2 className="form-h2-mob">Questions or need assistance? <br /> Let us know  about it!</h2>
         <p className="contact-para">Email us below to any question related 
 to our event</p></div>
-        <form >
+       <div className="form">
 <h2 className="form-h2">Questions or need assistance? Let us know  about it!</h2>
+<form  className="form1-container">
 <input type="text" placeholder="First Name" />
 <input type="email" placeholder="mail" />
 <input type="text" placeholder="Message" className="message" />
 <button className="submit-btn">Submit</button>
         </form>
+        </div>
         </div>
         <div className="contact-last">
         <h4>Share on</h4>

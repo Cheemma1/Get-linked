@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import ham from '../assets/Vector.png'
 import NavMob from './NavMob'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Nav = () => {
 const [open, setOpen] = useState(false)
+const navigate = useNavigate()
   return (
     <>
     <nav className=' container nav-bar'>
@@ -13,17 +14,16 @@ const [open, setOpen] = useState(false)
 {open && <NavMob open={open } setOpen={setOpen}/>}
 <div className='nav-link'>
 <ul>
- <li><a href="#">Timeline</a></li>
- <li><a href="#">Overview</a></li>
- <li><a href="#">Faqs</a></li>
- 
- <li><Link to={"contact"}>Contact</Link></li>
+ <li>Timeline</li>
+ <li>Overview</li>
+ <li>Faqs</li>
+ <li onClick={()=>navigate('/contact')}>Contact</li>
 </ul>
 
-<button className='nav-btn'> <Link to={"reg"}>Register</Link> </button>
+<button className='nav-btn' onClick={()=> navigate('/reg')}> Register </button>
 </div>
     </nav>
-    <div className='line'></div>
+  
     </>
   )
 }

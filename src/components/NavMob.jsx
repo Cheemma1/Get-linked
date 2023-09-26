@@ -11,13 +11,13 @@ const NavMob = ({open,setOpen}) => {
      
 
 <ul>
- <li><a href="#">Timeline</a></li>
- <li><a href="#">Overview</a></li>
- <li><a href="#">Faqs</a></li>
- <Link to={"/contact"}> <li>Contact</li></Link>
+ <li>Timeline</li>
+ <li>Overview</li>
+ <li>Faqs</li>
+ <li onClick={()=>navigate('/contact')}>Contact</li>
 </ul>
 
-<button className='nav-btn '> <Link to={"/reg"}>Register</Link></button>
+<button className='nav-btn' onClick={()=> navigate('/reg')}> Register </button>
 </div>
 
 

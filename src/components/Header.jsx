@@ -41,6 +41,7 @@ const Header = () => {
   return (
     <header>
       <Nav />
+      <div className='line'></div>
       <div className=" container hero">
         <div className="hero-text-right hero-mob">
           <h2>Igniting a Revolution in HR Innovation</h2>
@@ -84,7 +85,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+        </div>
       <div className="line"></div>
     </header>
   );
