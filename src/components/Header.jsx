@@ -3,6 +3,9 @@ import Nav from "./Nav";
 import heroImg from "../assets/man-wearing-smart-glasses-touching-virtual-screen 1.png";
 import vector from "../assets/Vector 4.svg";
 import heroimg2 from "../assets/Image 1.png";
+import light from "../assets/Creative.png"
+import chain from "../assets/chain-9365116-7621444.png"
+import fire from "../assets/fire.png"
 
 const Header = () => {
   function formatTimeUnit(unit) {
@@ -49,6 +52,10 @@ const Header = () => {
         </div>
         <div className="hero-txt">
           <div className="text-one">
+            <div className="lil-img">
+            <img src={light} alt="creative"  className="light"/>
+            <img src={chain} alt="creative"  className="chain"/>
+            <img src={fire} alt="creative"  className="fire"/></div>
             <h1>
               getlinked Tech Hackathon <span className="span">1.0</span>{" "}
             </h1>

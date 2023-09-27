@@ -1,22 +1,100 @@
+@media screen and (max-width:1115px) {
+  .container {
+    width: 100%;
+    padding: 1rem;
+  }
+  /* .hero-txt h1,.heading, .paragraph{
+    width: 100%;
+  } */
+  .medals{
+    width: 40%;
+  }
+ 
+  .intro-section{
+    margin: 0;
+  }
+}
+
+@media screen and (max-width:970px) {
+  /* .hero-txt h1,.heading, .paragraph{
+    width: 100%;
+  } */
+  .intro-section{
+    margin: 0;
+    padding: 0;
+flex-direction: column;
+text-align: center;
+
+
+  }
+  .intro-img{
+    width: 90%; }
+  .container {
+    width: 100%;
+    padding: 1rem;
+  }
+  .mirrow-container{
+   padding: 1rem;
+  }
+  .mirrow-container img{
+    width: 90%;
+  }
+  
+}
+
 @media screen and (max-width: 769px) {
   .container {
     width: 100%;
     padding: 1rem;
   }
+ 
   header {
-    height: 100%;
+    /* Remove one or three images by adjusting the background property */
+    background: url('../assets/Purple-Lens-Flare-PNG-mob.png'), url('../assets/mob-white-star.png'), url('../assets/chain-9365116-7621444.png'), #140d27;
+    /* Adjust the remaining images' positions */
+    background-repeat: no-repeat;
+    background-position: top 0vh left 0vw, top 25vh left 30vw ,right 4vw top 40vh;
   }
+
   .hero {
     grid-template-columns: repeat(1, 1fr);
+    text-align: center;
   }
+  .hero-txt h1{
+    width: 100%;
+  }
+ .hero-text1{
+  width: 100%;
+  padding: 0.9rem 0;
+ }
+ .image1{
+  width: 100%;
+  margin-bottom:-6%;
+ }
   .nav-link , .hero-text-right{
     display: none;
   }
   .hero-mob{
     display: block;
     text-align: center;
-    font-size: 1.5rem;
+    padding: 2rem 0;
+      
   }
+   .hero-mob h2{
+    font-size: 0.9rem;
+    text-align: center;
+  
+  }
+  .image2{
+  position: absolute;
+  right: 10%;
+  width: 25%;
+}
+  .timer{
+    justify-content: center;
+    padding-bottom: 3rem;
+  }
+  
   .nav-bar {
     padding: 2rem 1rem;
   }
@@ -65,11 +143,12 @@
   /* intro section */
   .intro-section{
     flex-direction: column;
-    padding: 1rem;
+  margin-top: 12rem;
   }
   .intro-img, .rules-img{
-    width: 95%;
+    width: 100%;
   }
+
   .arrow{
     position: absolute;
     top: 41%;
@@ -110,8 +189,6 @@
     display: block;
     background: url("./assets/Purple-Lens-Flare-PNG.png"), url('./assets/Purple-Lens-Flare-2.png'),
     url('./assets/sata gra.png'),url('./assets/whitestar.png'),  #140d27; 
-    background-repeat: no-repeat;
-     background-blend-mode: hard-light;
    background-position:  top -20vh left -2vw ,top 20vh right -4vw,  top 30vh left 25vw , bottom 20vh right 60vw;
   }
   .key-container{
@@ -127,12 +204,16 @@ grid-template-columns: repeat(1,1fr);
   width: 100%;
 }
 
-.reward-container{
+.reward-container,.privacy-container{
 flex-direction: column;
 gap: 3rem;
 }
+.para3{
+  padding:  0.6rem 1rem ;
+  font-size: 0.9rem;
+}
 
-.reward-txt {
+.reward-txt, .privacy-txt , .privacy-txt h2{
  padding-left: 0;
  padding-top: 3rem;
  width: 100%;
@@ -143,9 +224,55 @@ gap: 3rem;
 .sponsor-txt p{
   width: 100%;
 }
-.mirrow-container{
+.mirrow-container, .privacy-mirrow{
 padding: 1rem;
 }
 .mirrow-container img{
-width: 30%;
-}}
+width: 100%;
+}
+.footer-flex,.footer-last{
+  grid-template-columns: repeat(1,1fr);
+  gap: 0.6rem;
+}
+.footer-para{
+  font-size: 0.8rem;
+  text-align: left;
+  padding-bottom: 1rem;
+}
+.footer-link h5{
+  font-size: 0.9rem;
+  padding-bottom: 0.6rem;
+}
+.footer-link li, .last-txt, .footer-last{
+  font-size: 0.8rem;
+}
+
+.link{
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.footer-star{
+  position: absolute;
+  left: 2%;
+  top: 30%;
+  width: 4%;
+}
+.footer-star1{
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  width: 4%;
+}
+.footer-star2{
+  position: absolute;
+  right: 20%;
+  top: 60%;
+  width: 4%;
+}
+.footer-star3{
+  position: absolute;
+  right: 5%;
+  bottom: 4%;
+  width: 4%;
+}
+}

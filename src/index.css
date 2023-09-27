@@ -16,7 +16,10 @@
  --clr-Light-purple:#d434fe;
  --clr-pink:#FF26B9;
   --clr-Line-bg:rgba(255, 255, 255, 0.18);
-  --clr-gradeint: linear-gradient(270deg, #903aff 0%, #fe34b9 100%)
+  --clr-gradeint: linear-gradient(270deg, #903aff 0%, #fe34b9 100%);
+  --step-0: clamp(2.00rem, 1.27rem + 3.64vw, 4.00rem);
+  --step-1: clamp(1.00rem, 0.93rem + 0.36vw, 1.20rem);
+
 }
 body{
   background-color: var(--clr-body-bg);
@@ -119,7 +122,7 @@ background-position:  top 20vh left 8vw ,top -30vh left -8vw, left 38vw top 40vh
   padding-top: 3rem;
 }
 .hero-txt h1 {
-  font-size: 4rem;
+  font-size: var(--step-0);
   color: var(--clr-white);
   font-family:var(--font-family-heading) ;
   width: 90%;
@@ -134,7 +137,7 @@ background-position:  top 20vh left 8vw ,top -30vh left -8vw, left 38vw top 40vh
 }
 .hero-text1{
   padding: 2rem 0;
-  font-size: 1.2rem;
+  font-size: var(--step-1);
   color: var(--clr-white);
   font-family: var(--font-family-para);
   width: 83%;
@@ -190,6 +193,29 @@ position: relative;
   right: 3%;
   width: 25%;
 }
+.text-one h1{
+  position: relative;
+}
+.lil-img{
+  display: none;
+}
+/* 
+.light{
+  position: absolute;
+  left: 66%;
+  top: -29%;
+}
+.chain{
+  position: absolute;
+  right: 12%;
+  top: 40%;
+}
+
+.fire{
+  position: absolute;
+  right: 3%;
+  top: 42%;
+} */
 /* intro-section styling */
 
 .intro-section{
@@ -562,50 +588,8 @@ border: 1px solid #D434FE;
 background: rgba(255, 255, 255, 0.01);
 padding: 6rem;
 }
-.set-image{
-   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
 
 
-}
-.set-image2{
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  align-items: center;
-  
-}
-.company-logo{
- 
-  height: 70px;
-  width: 22%;
-  object-fit: contain;
-}
-
-/* .line-img{margin-left: 2rem;} */
-/* .line-img2{margin-right: 2rem;} */
-.horizontal{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 0;
- 
-  gap: 2rem;
-}
-.line-3{
- height: 4px; ; 
- width: 30%;
- background: var(--clr-Light-purple);
- margin: 2rem 0;
-}
-.line-4{
- height: 4px; ; 
- width: 35%;
- background: var(--clr-Light-purple);
- margin: 2rem 0;
-}
 /* privacy styling */
 
 .holder-last{
