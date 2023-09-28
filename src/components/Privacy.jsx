@@ -1,5 +1,6 @@
 import React from 'react'
 import image from '../assets/Group 9.png'
+import list from '../assets/list terms.svg'
 
 const Privacy = () => {
   return (
@@ -24,9 +25,9 @@ to the practices described in this policy.</p>
 <h3>Licensing Policy</h3>
 <h4>Here are terms of our Standard License:</h4>
 <ul>
- <li>The Standard License grants you a non-exclusive right to
+ <li> <img src={list} alt="check" />The Standard License grants you a non-exclusive right to
 navigate and register for our event</li>   
-<li>You are licensed to use the item available at any free source
+<li> <img src={list} alt="check" />You are licensed to use the item available at any free source
 sites, for your project developement</li>
 </ul>
 <button className='nav-btn privacy-btn'>Read More</button>

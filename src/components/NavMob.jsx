@@ -1,9 +1,10 @@
 import { X } from 'phosphor-react'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const NavMob = ({open,setOpen}) => {
+  const navigate = useNavigate()
   return (
     < div className='nav'>
   

@@ -3,9 +3,9 @@
     width: 100%;
     padding: 1rem;
   }
-  /* .hero-txt h1,.heading, .paragraph{
+  .hero-txt h1,.heading, .paragraph{
     width: 100%;
-  } */
+  }
   .medals{
     width: 40%;
   }
@@ -16,19 +16,18 @@
 }
 
 @media screen and (max-width:970px) {
-  /* .hero-txt h1,.heading, .paragraph{
-    width: 100%;
-  } */
-  .intro-section{
-    margin: 0;
-    padding: 0;
-flex-direction: column;
+ 
+.rules-container{
+  flex-direction: column;
 text-align: center;
 
 
   }
-  .intro-img{
-    width: 90%; }
+  .rules-container h2{
+    text-align: center;
+    width: 100%;
+    padding-top: 3rem;
+  }
   .container {
     width: 100%;
     padding: 1rem;
@@ -39,21 +38,15 @@ text-align: center;
   .mirrow-container img{
     width: 90%;
   }
-  
+  .question-container{
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 769px) {
   .container {
     width: 100%;
     padding: 1rem;
-  }
- 
-  header {
-    /* Remove one or three images by adjusting the background property */
-    background: url('../assets/Purple-Lens-Flare-PNG-mob.png'), url('../assets/mob-white-star.png'), url('../assets/chain-9365116-7621444.png'), #140d27;
-    /* Adjust the remaining images' positions */
-    background-repeat: no-repeat;
-    background-position: top 0vh left 0vw, top 25vh left 30vw ,right 4vw top 40vh;
   }
 
   .hero {
@@ -169,32 +162,40 @@ text-align: center;
   }
   .heading{
     font-size: 1.6rem;
+    padding-bottom: 0.7rem;
   }
   .paragraph, .heading{
     width: 100%;
     text-align: center;
+  }
+  .paragraph{
+    font-size: 0.9rem;
   }
   .rules-container{
     flex-direction: column-reverse;
     padding: 1rem;
     
   }
-  .rules-container, .key-container, .question-container h2{
+  .rules-container, .key-container, .question-container h2, .faq-img{
     width: 100%;
+
   }
-/* .holder{
-  display: none;
-} */
-  .holder{
-    display: block;
-    background: url("./assets/Purple-Lens-Flare-PNG.png"), url('./assets/Purple-Lens-Flare-2.png'),
-    url('./assets/sata gra.png'),url('./assets/whitestar.png'),  #140d27; 
-   background-position:  top -20vh left -2vw ,top 20vh right -4vw,  top 30vh left 25vw , bottom 20vh right 60vw;
-  }
+
+
   .key-container{
 flex-direction: column;
 gap: 1rem;
 padding: 5rem 1rem;
+justify-content: center;
+}
+.key-txt{
+  text-align: center;
+  font-size: 0.9rem;
+}
+.key-btn{
+  margin: 1rem auto 0 auto;
+  display: grid;
+  align-items: center;
 }
 .question-container{
 grid-template-columns: repeat(1,1fr);
@@ -203,10 +204,17 @@ grid-template-columns: repeat(1,1fr);
   padding-bottom: 2rem;
   width: 100%;
 }
+.question-container h2{
+  padding-top: 2rem;
+}
 
+.faq-flex h3, .para2, .sponsor-txt p, .privacy-mirrow li, .privacy-mirrow p{
+  font-size: 0.9rem;
+}
 .reward-container,.privacy-container{
 flex-direction: column;
 gap: 3rem;
+padding-bottom: 3rem;
 }
 .para3{
   padding:  0.6rem 1rem ;
@@ -218,24 +226,23 @@ gap: 3rem;
  padding-top: 3rem;
  width: 100%;
 }
-.cup, .medals{
+.sponsor-txt p, .cup, .medals, .key-container h2,.mirrow-container img{
+ 
   width: 100%;
 }
-.sponsor-txt p{
-  width: 100%;
+.mirrow-container{
+  margin: 3rem 0;
 }
-.mirrow-container, .privacy-mirrow{
+.mirrow-container, .privacy-mirrow, .sponsor-txt{
 padding: 1rem;
 }
-.mirrow-container img{
-width: 100%;
-}
+
 .footer-flex,.footer-last{
   grid-template-columns: repeat(1,1fr);
   gap: 0.6rem;
 }
 .footer-para{
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-align: left;
   padding-bottom: 1rem;
 }
@@ -244,7 +251,7 @@ width: 100%;
   padding-bottom: 0.6rem;
 }
 .footer-link li, .last-txt, .footer-last{
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .link{
@@ -275,4 +282,48 @@ width: 100%;
   bottom: 4%;
   width: 4%;
 }
+/* background stylings */
+  header {
+  background: url('../assets/Purple-Lens-Flare-PNG-mob.png'), url('../assets/mob-white-star.png'), #140d27;
+   background-repeat: no-repeat;
+  background-position: top 0vh left 0vw, top 25vh left 30vw;
+  }
+.holding-third{
+  background:
+ url('../assets/star-pur-mob.png'),url('../assets/mob-white-star.png'), url('../assets/star-pur-mob.png'),   #140d27; 
+ background-repeat: no-repeat;
+background-position:  top 3vh left 8vw,  bottom 4vh right 20vw, top 100vh right 25vw   ;
+}
+
+ .holder-last{background:  url('../assets/Purple-Lens-Flare-PNG-mob.png'),
+  url('../assets/Purple-Lens-Flare-PNG-side-mob.png'),url('../assets/smallstar.png'), url('../assets/star-pur-mob.png'),  url('../assets/star-pur-mob.png'),  url('../assets/mob-white-star.png'), url('../assets/mob-white-star.png'), url('../assets/mob-white-star.png'), #140d27; 
+  background-repeat: no-repeat;
+ background-position:  top 85vh left -2vw ,top -20vh right -14vw , top 8vh right 10vw,top 45vh right 10vw,bottom 50vh left 5vw, bottom 60vh right 35vw, bottom 25vh right 9vw ,bottom 15vh left 15vw ;
+}
+.holder{
+
+  background: url('../assets/Purple-Lens-Flare-PNG-mob.png'), url('../assets/mob-white-star.png'), url('../assets//Purple-Lens-Flare-PNG-side-mob.png'), url('../assets/mob-white-star.png'),  url('../assets/mob-white-star.png'), #140d27;
+  background-repeat: no-repeat;
+  background-position: top -10vh left 0vw, top 10vh left 3vw ,right -2vw top 10vh, left 10vw bottom 5vh, right 3vw top 30vh;
+   }
+
+   .holding-second{
+
+    background: url('../assets/Purple-Lens-Flare-PNG-mob.png'), url('../assets/star-pur-mob.png'), url('../assets//Purple-Lens-Flare-PNG-side-mob.png'), url('../assets/star-ash-mob.png'),  url('../assets/mob-white-star.png'), #140d27;
+    background-repeat: no-repeat;
+    background-position: top 10vh left 0vw, top 7vh left 48vw ,right -2vw bottom  3vh, left 48vw top 30vh, right 5vw bottom 14vh;
+     }
+
+.reward{
+  background:  url('../assets/Purple-Lens-Flare-PNG-mob.png'),url('../assets/Purple-Lens-Flare-PNG-side-mob.png'),
+  url('../assets/star-ash-mob.png'),url('../assets/mob-white-star.png'), url('../assets/mob-white-star.png'),  url('../assets/whitestar.png'), url('../assets/mob-white-star.png'), url('../assets/smallstar.png'),#140d27; 
+  background-repeat: no-repeat;
+ background-position:  top 10vh left -8vw ,top 60vh right -4vw,  top 10vh left 5vw , top 10vh right 6vw,top 40vh left 50vw,bottom 25vh left 36vw, top 65vh left 7vw, bottom 4vh right 2vw;
+}
+.sponsor{
+  background:  url('../assets/Purple-Lens-Flare-PNG-mirrow.png'),url('../assets/Purple-Lens-Flare-PNG-mirrow-side.png'), #140d27; 
+  background-repeat: no-repeat;
+ background-position:  top -20vh left -10vw ,bottom -20vh right -10vw;
+}
+/*  background styling stop*/
 }

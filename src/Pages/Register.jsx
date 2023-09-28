@@ -8,8 +8,96 @@ import footerstar1 from '../assets/star.png'
 import footerstar4 from '../assets/star.png'
 import footerstar2 from '../assets/star-pu.png'
 import footerstar3 from '../assets/star-pu.png'
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Register = () => {
+
+  const [register, setRegister] = useState({
+    name: "",
+    num: "",
+    email: "",
+    topic: "",
+    category: "",
+  size: "",
+  check:false
+  })
+  const [response, setResponse] = useState(null);
+  const [error, setError] = useState(null);
+  const [categories, setCategories] = useState([])
+
+ const handleReg= async ()=>{
+e.preventDefault();
+
+try {
+const response = await axios.post("https://backend.getlinked.ai/hackathon/registration",
+{
+  email: register.email,
+  phone_number: register.num, // Changed 'num' to 'phone_number' to match the API's expected field name
+  team_name: register.name,
+  group_size: register.size,
+  project_topic: register.topic,
+  category: register.category,
+  privacy_policy_accepted: register.check, 
+
+},{
+headers: {
+  'Content-Type': 'application/json',
+},}
+
+
+)
+console.log("Form Inputs:", register); // Log the inputs
+console.log("API Response:", response.data);
+
+setResponse(response.data);
+setError(null);
+setRegister({
+  name: "",
+  num: "",
+  email: "",
+  topic: "",
+  category: "",
+size: "",
+check:false
+})
+} 
+
+catch (error)
+  {
+    console.error(error);
+    setResponse(null);
+    setError(error);
+  }
+  
+ }
+ const handleChange = (e) => {
+  const { name, value, type, checked } = e.target;
+  const newValue = type === 'checkbox' ? checked : value;
+
+  setRegister({ ...register, [name]: newValue });
+};
+
+
+useEffect(() => {
+  // Fetch categories when the component mounts
+  const fetchCategories = async () => {
+    try {
+      const response = await axios.get(
+        'https://backend.getlinked.ai/hackathon/categories-list'
+      );
+
+      setCategories(response.data);
+    } catch (error) {
+      console.error('Error fetching categories:', error);
+    }
+  };
+
+  fetchCategories();
+}, []);
+
+
+
   return (
     <div className="body2">
           <img src={footerstar} alt=""  className="reg-star"/>
@@ -28,48 +116,66 @@ const Register = () => {
 <h2 className="form-h2">Register</h2>
 <p className="contact-para">Be part of this movement <span><img src={img2}alt="moving" /></span></p>
 <h3>CREATE YOUR ACCOUNT</h3>
-<form >
+<form  onSubmit={handleReg}>
   <div className="form-container">
   <div>
 <label htmlFor="">Team's Name </label>
-<input type="text"  placeholder="Enter the name of your group"/></div>
+<input type="text"  placeholder="Enter the name of your group" name="name"  value={register.name} onChange={handleChange}/></div>
   <div>
 <label htmlFor="">Phone</label>
-<input type="text"  placeholder="Enter your phone number"/></div>
+<input type="text"  placeholder="Enter your phone number" name="num" value={register.num} onChange={handleChange}/></div>
   <div>
 <label htmlFor="">Email</label>
-<input type="email"  placeholder="Enter your email address"/></div>
+<input type="email"  placeholder="Enter your email address" name="email" value={register.email} onChange={handleChange}/></div>
   <div>
 <label htmlFor="">Project Topic </label>
-<input type="text"  placeholder="What is your group project topic"/></div>
+<input type="text"  placeholder="What is your group project topic" name="topic" value={register.topic} onChange={handleChange}/></div>
+
   <div className="select-container">
-<label htmlFor="">Category</label>
-<select>
-  <option value="category">Select your category</option>
-  <option value="frontend">Frontend Development</option>
-  <option value="backend">Backend Development</option>
-  <option value="product">Product Design</option>
-  </select>
+          <label htmlFor="">Category</label>
+          <select
+            name="category"
+            value={register.category}
+            onChange={handleChange}
+          >
+            <option value="">Select your category</option>
+            {categories.map((category) => (
+              <option key={category.id} value={category.id}>
+                {category.name}
+              </option>
+            ))}
+          </select>
+
   </div>
   <div className="select-container">
 <label htmlFor="">Group Size</label>
-<select>
-  <option value="category">Select</option>
-  <option value="frontend">0-5</option>
-  <option value="backend">5-10</option>
-  <option value="product">10-15</option>
+<select name="size" value={register.size} onChange={handleChange}>
+  <option value="0">Select</option>
+  <option value="5">5</option>
+  <option value="10">10</option>
+  <option value="15">15</option>
   </select>
   </div>
-
-    </div>
+  </div>
+    
 
     <p className="last-p">Please review your registration details before submitting</p>
     <div className="check-flex">
-    <input type="checkbox" name="" id="" className="check" /> 
-    <p>I agreed with the event terms sand conditions  and privacy policy</p></div>
-    <button className="submit-btn reg-btn">Register Now</button>
+          <input
+            type="checkbox"
+            name="check"
+            id="check"
+            className="check"
+            checked={register.check}
+            onChange={handleChange}
+          />
+          <label htmlFor="check">
+            I agree with the event terms and conditions and privacy policy
+          </label> </div>
+    <button className="submit-btn reg-btn" type="submit">Register Now</button>
 </form>
-
+{response && <div> <p>ok</p></div>}
+      {error && <div>Error: {error.message}</div>}
 </div>
   
   </div>  

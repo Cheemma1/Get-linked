@@ -23,7 +23,7 @@ technologies or algorithms, and the scalability of the solution.</p>
 <p className='key-txt'> <span> Adherence to Hackathon Rules:</span> Judges will Ensure that the team adhered 
 to the rules and guidelines of the hackathon, including deadlines, use of 
 specific technologies or APIs, and any other competition-specific requirements.</p>
-<button className='nav-btn'>Know More</button>
+<button className='nav-btn key-btn'>Know More</button>
 </div>
 
 </div>

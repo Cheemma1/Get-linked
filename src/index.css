@@ -636,6 +636,12 @@ padding: 1rem 0;
 }
 .privacy-mirrow ul li{
   padding: 1rem 0;
+  list-style: none;
+}
+.privacy-mirrow li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
 }
 .img-container{
   width: 100%;
