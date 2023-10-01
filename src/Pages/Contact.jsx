@@ -42,7 +42,7 @@ const Contact = () => {
       setResponse(response.data);
       setError(null);
       setFormData({
-     firstName:"",
+            firstName:"",
     email:"",
     message:""
       })

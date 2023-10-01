@@ -150,6 +150,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-repeat: no-repeat;
    background-blend-mode: hard-light;
 background-position:  top -20vh left -2vw ,top 40vh right -1vw;
+height: 100%;
 }
 .reg-star{
   position: absolute;
@@ -206,6 +207,9 @@ font-family: var(--font-family-para);
   color: rgba(255, 255, 255, 0.25);
   font-family: var(--font-family-para);
 }
+.form-container input:focus{
+  background: transparent;
+}
 label{
   display: block;
 }
@@ -247,8 +251,34 @@ option{
   width: 100%;
   margin: 0.5rem 0;
 }
-
-
+/* sucess styling */
+.success-popup{
+  border-radius: 5px;
+border: 1px solid #D434FE;
+background: rgba(255, 255, 255, 0.01);
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  text-align: center;
+}
+.success-popup h2, p{
+  padding: 0.5rem 0;
+  width: 60%;
+  margin: auto;
+  font-family: var(--font-family-para);
+}
+.success-popup button{
+  width: 90%;
+  padding: 1rem 0;
+  background: var(--clr-gradeint);
+  color: var(--clr-white);
+  border: 0;
+  border-radius: var(--border-box-button);
+  cursor: pointer;
+  font-family: var(--font-weight-para);
+}
 
 /* media queries starts here */
 

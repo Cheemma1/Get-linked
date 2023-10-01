@@ -377,161 +377,114 @@ width: 60%;
 
 /* Timeline styling */
 
-.timeline-txt{
+/* .timeline-txt{
   padding: 3rem 0;
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
  
-}
-.timeline-txt p{
-  width: 36%;
-}
-.timeline-container {
+} */
+
+.timeline_section .time, .timeline_section .here{
+  max-width: 346px;
+  width: 100%;
   text-align: center;
-  padding-bottom: 4rem;
+  margin: 20px auto;
 }
 
-/* .timeline{
+.timeline_section .T-container{
+  width: 950px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.timeline_section .container_2{
+  display: none;
+}
+
+.timeline_section .T-container .wrapper{
   display: flex;
-  align-items: center;
-   justify-content: space-between; 
+  flex-direction: column;
+  gap: 60px;
+  margin: 110px 50px 0 0;
+  width: 50%;
+  background-image: url("/images/star/dark.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
-.timeline>span {
-  width: 40px;
-  aspect-ratio: 1/1;
-  align-self: flex-start;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: bold;
-  font-size: 1.1em;
-  background: rgba(255, 255, 255, 0.2);
+.timeline_section .T-container .wrapper_2{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 110px 0 0 50px;
+  width: 50%;
+  background-image: url("/images/star/white.png");
+  background-repeat: no-repeat;
+  background-position: right 360px;
+}
+
+.timeline_section .T-container .wrapper h2{
+  color: var(--clr-Light-purple);
+  font-size: 24px;
+  text-align: right;
+  width: 100%;
+  line-height: 25px;
+  padding-bottom: 15px;
+}
+
+.timeline_section .container .wrapper p{
+  width: 100%;
+  text-align: right;
+}
+
+.timeline_section .container .wrapper_2 h2{
+  font-size: 24px;
+  color: var(--pink2);
+  width: 100%;
+  line-height: 25px;
+  text-align: left;
+  padding-bottom: 15px;
+}
+
+.timeline_section .container .wrapper_2 p{
+  width: 100%;
+  text-align: left;
+}
+
+.timeline_section .container .wrapper_mid{
+  width: 53px;
+  height: 53px;
+}
+
+.timeline_line_1{
+  height: 100px;
+  width: 4px;
+  margin: 10px auto;
+  background: var(--clr-pink);
+}
+
+.timeline_line{
+  height: 76px;
+  width: 4px;
+  margin: 10px auto;
+  background: var(--clr-pink);
+}
+
+.rectangle{
+  max-width: 43px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.timeline>.num::before {
-  content: "";
-  width: 3px;
-  display: inline-block;
-  height: 25px;
-  background: rgba(255, 255, 255, 0.2);
-position: absolute;
-  top: 100%;
-  left: 19px;
+  background: var(--clr-gradeint);
+  color: var(--white);
+  font-size: 20px;
 
 }
- */
- 
 
- 
-
-
-
-
- /* .timeline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  padding: 20px;
-} */
-
-.li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* position: relative; */
- 
-}
-
-.circle {
-  position: relative;
-  border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-
-  font-weight: bold;
- 
-}
-
-.circle h2{
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%,-50%);
-margin: 0;
-}
-.vert{
-  width: 2px;
-  height: 40px;
-  margin: 10px auto 10px auto;
-  background: #2ecc71;
-}
-.text { 
-   flex: 1;
-  z-index: 1;
-  display: flex; /* Add display: flex */
-  flex-direction: column; /* Stack text elements vertically */
-  align-items: center; /* Center text horizontally */
-  text-align: center; /* Center text within each element */
-}
-
-
-/* Additional styling (optional) */
-.li h2 {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.li p {
-  font-size: 1rem;
-}
-
-
-
-
-
-
-/* .info-timeline ul li span.timeline-circle {
-  position: relative;
-  border: 2px solid #999;
-  border-radius: 100%;
-  width: 50px;
-  line-height: 50px;
-  text-align: center;
-  margin-top: 50px;
-  background-color: #fff;
-  z-index: 2;
-  display: inline-block;
-}
-
-.info-timeline ul li:not(:first-of-type) span.timeline-circle::before {
-  position: absolute;
-  border: 1px solid #999;
-  width: 0;
-  height: 50px;
-  display: block;
-  content: '';
-  left: 50%;
-  z-index: 1;
-  top: -54px;
-  margin-left: -1px;
-}
-
-.info-timeline ul li a {
-  color: #000;
-}
-.li{
-  display: flex ;
-  align-items: center;
-  justify-content: center;
-} */
 
 /* rewards styling */
 .reward{

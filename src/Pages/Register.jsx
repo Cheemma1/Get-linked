@@ -8,6 +8,7 @@ import footerstar1 from '../assets/star.png'
 import footerstar4 from '../assets/star.png'
 import footerstar2 from '../assets/star-pu.png'
 import footerstar3 from '../assets/star-pu.png'
+import congrats from '../assets/congratulation (1).png'
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -15,7 +16,7 @@ const Register = () => {
 
   const [register, setRegister] = useState({
     name: "",
-    num: "",
+   phone_number : "",
     email: "",
     topic: "",
     category: "",
@@ -26,27 +27,28 @@ const Register = () => {
   const [error, setError] = useState(null);
   const [categories, setCategories] = useState([])
 
- const handleReg= async ()=>{
+ const handleReg= async (e)=>{
 e.preventDefault();
 
 try {
-const response = await axios.post("https://backend.getlinked.ai/hackathon/registration",
-{
-  email: register.email,
-  phone_number: register.num, // Changed 'num' to 'phone_number' to match the API's expected field name
-  team_name: register.name,
-  group_size: register.size,
-  project_topic: register.topic,
-  category: register.category,
-  privacy_policy_accepted: register.check, 
+  if (!register.name || !register.num || !register.email || !register.topic || !register.category || !register.size) {
+    setError(new Error('Please fill in all required fields.'));
+    return;
+  }
+  const response = await axios.post('https://backend.getlinked.ai/hackathon/registration', {
+    email: register.email,
+    phone_number: register.num, // Use the correct field name
+    team_name: register.name,
+    group_size: register.size,
+    project_topic: register.topic,
+    category: register.category,
+    privacy_policy_accepted: register.check,
+  }, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 
-},{
-headers: {
-  'Content-Type': 'application/json',
-},}
-
-
-)
 console.log("Form Inputs:", register); // Log the inputs
 console.log("API Response:", response.data);
 
@@ -99,7 +101,11 @@ useEffect(() => {
 
 
   return (
-    <div className="body2">
+    <div   className="body2" style={{
+      backgroundColor:
+        displayedCategory === "month" ? "#0d0d0d" : "#097fd9",
+      color: "white",
+    }}  >
           <img src={footerstar} alt=""  className="reg-star"/>
         <img src={footerstar1} alt="" className="reg-star1" />
         <img src={footerstar4} alt="" className="reg-star4" />
@@ -123,19 +129,19 @@ useEffect(() => {
 <input type="text"  placeholder="Enter the name of your group" name="name"  value={register.name} onChange={handleChange}/></div>
   <div>
 <label htmlFor="">Phone</label>
-<input type="text"  placeholder="Enter your phone number" name="num" value={register.num} onChange={handleChange}/></div>
+<input type="text"  placeholder="Enter your phone number" name="num" value={register.num}  onChange={handleChange}/></div>
   <div>
 <label htmlFor="">Email</label>
 <input type="email"  placeholder="Enter your email address" name="email" value={register.email} onChange={handleChange}/></div>
   <div>
 <label htmlFor="">Project Topic </label>
-<input type="text"  placeholder="What is your group project topic" name="topic" value={register.topic} onChange={handleChange}/></div>
+<input type="text"  placeholder="What is your group project topic" name="topic" value={register.topic}  onChange={handleChange}/></div>
 
   <div className="select-container">
           <label htmlFor="">Category</label>
           <select
             name="category"
-            value={register.category}
+            value={register.category} 
             onChange={handleChange}
           >
             <option value="">Select your category</option>
@@ -149,7 +155,7 @@ useEffect(() => {
   </div>
   <div className="select-container">
 <label htmlFor="">Group Size</label>
-<select name="size" value={register.size} onChange={handleChange}>
+<select name="size" value={register.size}  onChange={handleChange}>
   <option value="0">Select</option>
   <option value="5">5</option>
   <option value="10">10</option>
@@ -173,8 +179,19 @@ useEffect(() => {
             I agree with the event terms and conditions and privacy policy
           </label> </div>
     <button className="submit-btn reg-btn" type="submit">Register Now</button>
-</form>
-{response && <div> <p>ok</p></div>}
+</form>     
+ {response && (
+        <div className="success-popup">
+          <img src={congrats} alt="congratulations-png" />
+          <h2>Congratulations
+you have successfully Registered!</h2>
+          <p>Yes, it was easy and you did it!
+check your mail box for next step</p>
+
+<button>Back</button>
+        </div>
+      )}
+
       {error && <div>Error: {error.message}</div>}
 </div>
   
