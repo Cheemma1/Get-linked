@@ -8,6 +8,7 @@ import footerstar from "../assets/smallstar.png";
 import footerstar1 from "../assets/star.png";
 import footerstar2 from "../assets/star-pu.png";
 import footerstar3 from "../assets/star-pu.png";
+import congrats from '../assets/congratulation (1).png'
 import { useState } from "react";
 import axios from "axios";
 
@@ -19,13 +20,14 @@ const Contact = () => {
   });
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
+  const [contactPop, setContactPop] =useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const response = await axios.post(
-        'https://backend.getlinked.ai/hackathon/contact-form', // Replace with the actual API endpoint
+        'https://backend.getlinked.ai/hackathon/contact-form', 
         {
           email: formData.email,
           phone_number: formData.phoneNumber,
@@ -37,6 +39,7 @@ const Contact = () => {
             'Content-Type': 'application/json',
           },
         }
+        
       );
 
       setResponse(response.data);
@@ -46,6 +49,7 @@ const Contact = () => {
     email:"",
     message:""
       })
+      setContactPop(true)
     } catch (error) {
       console.error(error);
       setResponse(null);
@@ -62,7 +66,7 @@ const Contact = () => {
     
   
   return (
-    <div className="body">
+    <div className={`body ${ contactPop ? 'dimmed': ''}`}>
       <div className="container">
         <img src={footerstar} alt="" className="contact-star" />
         <img src={footerstar1} alt="" className="contact-star1" />
@@ -101,7 +105,15 @@ const Contact = () => {
 
    <button type="submit" className="submit-btn">Submit</button>
             </form>
-  {response && <div>Response: {JSON.stringify(response)}</div>}
+  {contactPop && (<div className="contact-success">
+  <img src={congrats} alt="congratulations-png" className="cont-img" />
+          <h2 className="cont-h2">We have gotten your Message</h2>
+          <p className="cont-p">
+check your mail box for next step</p>
+
+<button onClick={() =>setContactPop(false)}className="cont-btn">Back</button>
+    </div>
+    ) }
       {error && <div>Error: {error.message}</div>}
           </div>
         </div>
