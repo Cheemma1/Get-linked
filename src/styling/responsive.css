@@ -180,6 +180,67 @@ text-align: center;
     width: 100%;
 
   }
+  
+.tl{
+  flex-direction:column ;
+  gap: 1rem;
+ max-width: 100%;
+ margin: 0;
+ margin-bottom: 3rem;
+}
+#tl2,
+#tl4,
+#tl6 {
+  flex-direction:column ;
+  align-items: center;
+  justify-content: center;
+}
+#tl1  .dates, #tl3 .dates, #tl5 .dates,
+#tl2 .dates,
+#tl4 .dates,
+#tl6 .dates{
+  text-align: left;
+  padding-left: 2rem;
+}
+
+#tl2 .dets h4,
+#tl4 .dets h4,
+#tl6 .dets h4 {
+    text-align: left;
+    max-width: 100%;
+    padding-left: 2rem;
+}
+.tl .dets p{
+  text-align: left;
+  font-size: 0.78rem;
+  padding-left: 2rem;
+}
+.timeline-container .description{
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.tl .dets h4,
+.tl .dates{
+  font-size: 0.9rem;
+  padding-left: 2rem;
+}
+.tl .indicator{
+  left: 2%;
+  bottom: 0;
+
+}
+.tl .dets h4 {
+  text-align: left;
+  max-width: 100%;
+
+}
+
+.timeline-container .star11 {
+  top: 15%;
+  left: 5%;
+  width: 4%;
+}
+
 
 
   .key-container{
@@ -325,5 +386,6 @@ background-position:  top 3vh left 8vw,  bottom 4vh right 20vw, top 100vh right 
   background-repeat: no-repeat;
  background-position:  top -20vh left -10vw ,bottom -20vh right -10vw;
 }
+
 /*  background styling stop*/
 }
